@@ -114,7 +114,7 @@ namespace MVC_Pustokkk.Controllers
             }
             HomeVM vm = new HomeVM()
             {
-                Featureds = featured
+                //Featureds = (object)featured
             };
             return View(vm);
             

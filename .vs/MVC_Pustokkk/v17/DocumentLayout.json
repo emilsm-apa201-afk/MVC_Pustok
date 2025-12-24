@@ -3,20 +3,48 @@
   "WorkspaceRootPath": "C:\\Users\\Silent Telecomp\\source\\repos\\MVC_Pustokkk\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E08AB1FE-C319-4652-8923-3A8DFABA117D}|MVC_Pustokkk.csproj|c:\\users\\silent telecomp\\source\\repos\\mvc_pustokkk\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E08AB1FE-C319-4652-8923-3A8DFABA117D}|MVC_Pustokkk.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E08AB1FE-C319-4652-8923-3A8DFABA117D}|MVC_Pustokkk.csproj|c:\\users\\silent telecomp\\source\\repos\\mvc_pustokkk\\scaffoldingreadme.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{E08AB1FE-C319-4652-8923-3A8DFABA117D}|MVC_Pustokkk.csproj|solutionrelative:scaffoldingreadme.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E08AB1FE-C319-4652-8923-3A8DFABA117D}|MVC_Pustokkk.csproj|c:\\users\\silent telecomp\\source\\repos\\mvc_pustokkk\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E08AB1FE-C319-4652-8923-3A8DFABA117D}|MVC_Pustokkk.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{E08AB1FE-C319-4652-8923-3A8DFABA117D}|MVC_Pustokkk.csproj|c:\\users\\silent telecomp\\source\\repos\\mvc_pustokkk\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E08AB1FE-C319-4652-8923-3A8DFABA117D}|MVC_Pustokkk.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E08AB1FE-C319-4652-8923-3A8DFABA117D}|MVC_Pustokkk.csproj|c:\\users\\silent telecomp\\source\\repos\\mvc_pustokkk\\viewmodels\\homevm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E08AB1FE-C319-4652-8923-3A8DFABA117D}|MVC_Pustokkk.csproj|solutionrelative:viewmodels\\homevm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{E08AB1FE-C319-4652-8923-3A8DFABA117D}|MVC_Pustokkk.csproj|c:\\users\\silent telecomp\\source\\repos\\mvc_pustokkk\\models\\details.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E08AB1FE-C319-4652-8923-3A8DFABA117D}|MVC_Pustokkk.csproj|solutionrelative:models\\details.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{E08AB1FE-C319-4652-8923-3A8DFABA117D}|MVC_Pustokkk.csproj|c:\\users\\silent telecomp\\source\\repos\\mvc_pustokkk\\models\\featured.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E08AB1FE-C319-4652-8923-3A8DFABA117D}|MVC_Pustokkk.csproj|solutionrelative:models\\featured.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E08AB1FE-C319-4652-8923-3A8DFABA117D}|MVC_Pustokkk.csproj|c:\\users\\silent telecomp\\source\\repos\\mvc_pustokkk\\models\\base\\baseentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E08AB1FE-C319-4652-8923-3A8DFABA117D}|MVC_Pustokkk.csproj|solutionrelative:models\\base\\baseentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E08AB1FE-C319-4652-8923-3A8DFABA117D}|MVC_Pustokkk.csproj|c:\\users\\silent telecomp\\source\\repos\\mvc_pustokkk\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E08AB1FE-C319-4652-8923-3A8DFABA117D}|MVC_Pustokkk.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E08AB1FE-C319-4652-8923-3A8DFABA117D}|MVC_Pustokkk.csproj|c:\\users\\silent telecomp\\source\\repos\\mvc_pustokkk\\views\\auth\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E08AB1FE-C319-4652-8923-3A8DFABA117D}|MVC_Pustokkk.csproj|solutionrelative:views\\auth\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E08AB1FE-C319-4652-8923-3A8DFABA117D}|MVC_Pustokkk.csproj|c:\\users\\silent telecomp\\source\\repos\\mvc_pustokkk\\views\\product\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E08AB1FE-C319-4652-8923-3A8DFABA117D}|MVC_Pustokkk.csproj|solutionrelative:views\\product\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E08AB1FE-C319-4652-8923-3A8DFABA117D}|MVC_Pustokkk.csproj|c:\\users\\silent telecomp\\source\\repos\\mvc_pustokkk\\dal\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E08AB1FE-C319-4652-8923-3A8DFABA117D}|MVC_Pustokkk.csproj|solutionrelative:dal\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E08AB1FE-C319-4652-8923-3A8DFABA117D}|MVC_Pustokkk.csproj|c:\\users\\silent telecomp\\source\\repos\\mvc_pustokkk\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E08AB1FE-C319-4652-8923-3A8DFABA117D}|MVC_Pustokkk.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E08AB1FE-C319-4652-8923-3A8DFABA117D}|MVC_Pustokkk.csproj|c:\\users\\silent telecomp\\source\\repos\\mvc_pustokkk\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -31,24 +59,12 @@
       "RelativeMoniker": "D:0:0:{E08AB1FE-C319-4652-8923-3A8DFABA117D}|MVC_Pustokkk.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E08AB1FE-C319-4652-8923-3A8DFABA117D}|MVC_Pustokkk.csproj|c:\\users\\silent telecomp\\source\\repos\\mvc_pustokkk\\views\\product\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E08AB1FE-C319-4652-8923-3A8DFABA117D}|MVC_Pustokkk.csproj|solutionrelative:views\\product\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{E08AB1FE-C319-4652-8923-3A8DFABA117D}|MVC_Pustokkk.csproj|c:\\users\\silent telecomp\\source\\repos\\mvc_pustokkk\\views\\blog\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{E08AB1FE-C319-4652-8923-3A8DFABA117D}|MVC_Pustokkk.csproj|solutionrelative:views\\blog\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E08AB1FE-C319-4652-8923-3A8DFABA117D}|MVC_Pustokkk.csproj|c:\\users\\silent telecomp\\source\\repos\\mvc_pustokkk\\views\\auth\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E08AB1FE-C319-4652-8923-3A8DFABA117D}|MVC_Pustokkk.csproj|solutionrelative:views\\auth\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{E08AB1FE-C319-4652-8923-3A8DFABA117D}|MVC_Pustokkk.csproj|c:\\users\\silent telecomp\\source\\repos\\mvc_pustokkk\\views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{E08AB1FE-C319-4652-8923-3A8DFABA117D}|MVC_Pustokkk.csproj|solutionrelative:views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E08AB1FE-C319-4652-8923-3A8DFABA117D}|MVC_Pustokkk.csproj|c:\\users\\silent telecomp\\source\\repos\\mvc_pustokkk\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E08AB1FE-C319-4652-8923-3A8DFABA117D}|MVC_Pustokkk.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E08AB1FE-C319-4652-8923-3A8DFABA117D}|MVC_Pustokkk.csproj|c:\\users\\silent telecomp\\source\\repos\\mvc_pustokkk\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -70,11 +86,62 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 13,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ScaffoldingReadMe.txt",
+              "DocumentMoniker": "C:\\Users\\Silent Telecomp\\source\\repos\\MVC_Pustokkk\\ScaffoldingReadMe.txt",
+              "RelativeDocumentMoniker": "ScaffoldingReadMe.txt",
+              "ToolTip": "C:\\Users\\Silent Telecomp\\source\\repos\\MVC_Pustokkk\\ScaffoldingReadMe.txt",
+              "RelativeToolTip": "ScaffoldingReadMe.txt",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2025-12-24T11:23:14.615Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Details.cs",
+              "DocumentMoniker": "C:\\Users\\Silent Telecomp\\source\\repos\\MVC_Pustokkk\\Models\\Details.cs",
+              "RelativeDocumentMoniker": "Models\\Details.cs",
+              "ToolTip": "C:\\Users\\Silent Telecomp\\source\\repos\\MVC_Pustokkk\\Models\\Details.cs",
+              "RelativeToolTip": "Models\\Details.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-22T10:11:48.844Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "BaseEntity.cs",
+              "DocumentMoniker": "C:\\Users\\Silent Telecomp\\source\\repos\\MVC_Pustokkk\\Models\\Base\\BaseEntity.cs",
+              "RelativeDocumentMoniker": "Models\\Base\\BaseEntity.cs",
+              "ToolTip": "C:\\Users\\Silent Telecomp\\source\\repos\\MVC_Pustokkk\\Models\\Base\\BaseEntity.cs",
+              "RelativeToolTip": "Models\\Base\\BaseEntity.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-22T10:08:26.097Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\Silent Telecomp\\source\\repos\\MVC_Pustokkk\\DAL\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "DAL\\AppDbContext.cs",
+              "ToolTip": "C:\\Users\\Silent Telecomp\\source\\repos\\MVC_Pustokkk\\DAL\\AppDbContext.cs",
+              "RelativeToolTip": "DAL\\AppDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-22T10:01:34.505Z"
             },
             {
               "$type": "Document",
@@ -84,26 +151,27 @@
               "RelativeDocumentMoniker": "ViewModels\\HomeVM.cs",
               "ToolTip": "C:\\Users\\Silent Telecomp\\source\\repos\\MVC_Pustokkk\\ViewModels\\HomeVM.cs",
               "RelativeToolTip": "ViewModels\\HomeVM.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAA0AAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAcAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-17T19:19:36.943Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "Featured.cs",
               "DocumentMoniker": "C:\\Users\\Silent Telecomp\\source\\repos\\MVC_Pustokkk\\Models\\Featured.cs",
               "RelativeDocumentMoniker": "Models\\Featured.cs",
               "ToolTip": "C:\\Users\\Silent Telecomp\\source\\repos\\MVC_Pustokkk\\Models\\Featured.cs",
               "RelativeToolTip": "Models\\Featured.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAyAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-17T14:29:24.852Z"
+              "WhenOpened": "2025-12-17T14:29:24.852Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 15,
               "Title": "_ViewStart.cshtml",
               "DocumentMoniker": "C:\\Users\\Silent Telecomp\\source\\repos\\MVC_Pustokkk\\Views\\_ViewStart.cshtml",
               "RelativeDocumentMoniker": "Views\\_ViewStart.cshtml",
@@ -115,7 +183,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 6,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Silent Telecomp\\source\\repos\\MVC_Pustokkk\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
@@ -127,7 +195,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 12,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\Silent Telecomp\\source\\repos\\MVC_Pustokkk\\Views\\Shop\\Index.cshtml",
               "RelativeDocumentMoniker": "Views\\Shop\\Index.cshtml",
@@ -139,7 +207,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 13,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "C:\\Users\\Silent Telecomp\\source\\repos\\MVC_Pustokkk\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
@@ -151,32 +219,31 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\Silent Telecomp\\source\\repos\\MVC_Pustokkk\\Views\\Product\\Index.cshtml",
               "RelativeDocumentMoniker": "Views\\Product\\Index.cshtml",
               "ToolTip": "C:\\Users\\Silent Telecomp\\source\\repos\\MVC_Pustokkk\\Views\\Product\\Index.cshtml",
               "RelativeToolTip": "Views\\Product\\Index.cshtml",
-              "ViewState": "AgIAADQDAAAAAAAAAAAYwFkDAAAKAAAAAAAAAA==",
+              "ViewState": "AgIAAH8CAAAAAAAAAAAAAFkDAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-12-17T13:55:23.241Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 10,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\Silent Telecomp\\source\\repos\\MVC_Pustokkk\\Views\\Home\\Index.cshtml",
               "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
               "ToolTip": "C:\\Users\\Silent Telecomp\\source\\repos\\MVC_Pustokkk\\Views\\Home\\Index.cshtml",
               "RelativeToolTip": "Views\\Home\\Index.cshtml",
-              "ViewState": "AgIAAMAAAAAAAAAAAAAAAOAAAABcAAAAAAAAAA==",
+              "ViewState": "AgIAALsAAAAAAAAAAEBVwOAAAABcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-12-17T13:54:57.239Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-17T13:54:57.239Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 14,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\Silent Telecomp\\source\\repos\\MVC_Pustokkk\\Views\\Blog\\Index.cshtml",
               "RelativeDocumentMoniker": "Views\\Blog\\Index.cshtml",
@@ -188,7 +255,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 7,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\Silent Telecomp\\source\\repos\\MVC_Pustokkk\\Views\\Auth\\Index.cshtml",
               "RelativeDocumentMoniker": "Views\\Auth\\Index.cshtml",
@@ -200,7 +267,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 17,
               "Title": "ShopController.cs",
               "DocumentMoniker": "C:\\Users\\Silent Telecomp\\source\\repos\\MVC_Pustokkk\\Controllers\\ShopController.cs",
               "RelativeDocumentMoniker": "Controllers\\ShopController.cs",
@@ -212,7 +279,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 16,
               "Title": "ProductController.cs",
               "DocumentMoniker": "C:\\Users\\Silent Telecomp\\source\\repos\\MVC_Pustokkk\\Controllers\\ProductController.cs",
               "RelativeDocumentMoniker": "Controllers\\ProductController.cs",
@@ -224,20 +291,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "HomeController.cs",
               "DocumentMoniker": "C:\\Users\\Silent Telecomp\\source\\repos\\MVC_Pustokkk\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
               "ToolTip": "C:\\Users\\Silent Telecomp\\source\\repos\\MVC_Pustokkk\\Controllers\\HomeController.cs",
               "RelativeToolTip": "Controllers\\HomeController.cs",
-              "ViewState": "AgIAAF8AAAAAAAAAAAAQwHIAAAAkAAAAAAAAAA==",
+              "ViewState": "AgIAAGYAAAAAAAAAAAAqwHoAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-17T13:53:07.146Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 18,
               "Title": "BlogController.cs",
               "DocumentMoniker": "C:\\Users\\Silent Telecomp\\source\\repos\\MVC_Pustokkk\\Controllers\\BlogController.cs",
               "RelativeDocumentMoniker": "Controllers\\BlogController.cs",
@@ -249,7 +316,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 11,
               "Title": "AuthController.cs",
               "DocumentMoniker": "C:\\Users\\Silent Telecomp\\source\\repos\\MVC_Pustokkk\\Controllers\\AuthController.cs",
               "RelativeDocumentMoniker": "Controllers\\AuthController.cs",

@@ -4,6 +4,7 @@ namespace MVC_Pustokkk.ViewModels
 {
     public class HomeVM
     {
-        public List<Featured>Featureds { get; set; }
+        public List<Featured>Products { get; set; }
+        public List<object> Featureds { get; set; }
     }
 }
