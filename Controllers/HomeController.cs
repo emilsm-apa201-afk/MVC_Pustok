@@ -6,10 +6,10 @@ namespace MVC_Pustokkk.Controllers
 {
     public class HomeController : Controller
     {
-        public IActionResult Index()
+        public IActionResult Index(List<Featured> featured)
         {
 
-            List<Featured> featured = new List<Featured>();
+            //List<Featured> featured = new List<Featured>();
             {
                 new Featured()
                 {
@@ -114,7 +114,7 @@ namespace MVC_Pustokkk.Controllers
             }
             HomeVM vm = new HomeVM()
             {
-                //Featureds = (object)featured
+                Featureds = featured
             };
             return View(vm);
             
