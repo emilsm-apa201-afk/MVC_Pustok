@@ -1,8 +1,9 @@
-﻿namespace MVC_Pustokkk.Models
+﻿using MVC_Pustokkk.Models.Base;
+
+namespace MVC_Pustokkk.Models
 {
-    public class Featured
-    {
-        public int Id { get; set; }    
+    public class Featured:BaseEntity
+    {  
         public string Author { get; set; }
         public string Details { get; set; }
         public string Image { get; set; }
