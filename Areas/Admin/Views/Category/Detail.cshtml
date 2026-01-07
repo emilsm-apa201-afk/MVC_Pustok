@@ -1,0 +1,19 @@
+﻿@using MVC_Pustokkk.Areas.Admin.ViewModels
+@model CategoryVM
+
+<div>
+	<h3>@Model.Name</h3>
+	<p>@Model.Id</p>
+</div>
+
+@foreach(FeaturedVM featured in Model.Featureds)
+{
+	<div>
+		<h3>@featured.Author</h3>
+		<p>@featured.Details</p>
+		<p>@featured.Image</p>
+		<p>@featured.Price</p>
+		<p>@featured.PriceOld</p>
+		<p>@featured.PriceDiscount</p>
+	</div>
+}

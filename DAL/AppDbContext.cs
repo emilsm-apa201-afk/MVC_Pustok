@@ -8,5 +8,6 @@ namespace MVC_Pustokkk.DAL
     {
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
         public DbSet<Featured> Featureds { get; set; }
+        public DbSet<Category> Categories { get; set; }
     }
 }

@@ -1,9 +1,9 @@
-﻿using MVC_Pustokkk.Models.Base;
+﻿using MVC_Pustokkk.Migrations;
 
-namespace MVC_Pustokkk.Models
+namespace MVC_Pustokkk.Areas.Admin.ViewModels
 {
-    public class Featured:BaseEntity
-    {  
+    public class FeaturedVM
+    {
         public int Id { get; set; }
         public string Author { get; set; }
         public string Details { get; set; }
@@ -11,8 +11,7 @@ namespace MVC_Pustokkk.Models
         public decimal Price { get; set; }
         public decimal PriceOld { get; set; }
         public decimal PriceDiscount { get; set; }
-        public int CategoryId { get; set; }
-        public Category Category { get; set; }
-
+        //public int CategoryId { get; set; }
+        //public Category Category { get; set; }
     }
 }
