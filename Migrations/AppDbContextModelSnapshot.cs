@@ -45,7 +45,7 @@ namespace MVC_Pustokkk.Migrations
                     b.ToTable("Categories");
                 });
 
-            modelBuilder.Entity("MVC_Pustokkk.Models.Featured", b =>
+            modelBuilder.Entity("MVC_Pustokkk.Models.Product", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -87,13 +87,13 @@ namespace MVC_Pustokkk.Migrations
 
                     b.HasIndex("CategoryId");
 
-                    b.ToTable("Featureds");
+                    b.ToTable("Products");
                 });
 
-            modelBuilder.Entity("MVC_Pustokkk.Models.Featured", b =>
+            modelBuilder.Entity("MVC_Pustokkk.Models.Product", b =>
                 {
                     b.HasOne("MVC_Pustokkk.Models.Category", "Category")
-                        .WithMany("Featureds")
+                        .WithMany("Products")
                         .HasForeignKey("CategoryId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -103,7 +103,7 @@ namespace MVC_Pustokkk.Migrations
 
             modelBuilder.Entity("MVC_Pustokkk.Models.Category", b =>
                 {
-                    b.Navigation("Featureds");
+                    b.Navigation("Products");
                 });
 #pragma warning restore 612, 618
         }

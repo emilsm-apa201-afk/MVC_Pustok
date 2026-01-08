@@ -1,0 +1,17 @@
+﻿@model MVC_Pustokkk.Models.Product
+
+<div class="card">
+    <div class="card-body">
+        <h3>@Model.Author</h3>
+        <p>@Model.Details</p>
+        <p>Price: @Model.Price</p>
+        <p>Old Price: @Model.PriceOld</p>
+        <p>Discount: @Model.PriceDiscount</p>
+        <p>Category: @Model.Category?.Name</p>
+        @if (!string.IsNullOrEmpty(Model.Image))
+        {
+            <img src="~/assets/image/@Model.Image" width="200" />
+        }
+    </div>
+</div>
+

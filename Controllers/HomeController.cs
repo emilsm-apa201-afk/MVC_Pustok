@@ -24,7 +24,7 @@ namespace MVC_Pustokkk.Controllers
         {
             HomeVM vm = new HomeVM()
             {
-                Featureds = await _context.Featureds.ToListAsync()
+                Products = await _context.Products.ToListAsync()
             };
             return View(vm);
         }

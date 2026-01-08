@@ -12,7 +12,7 @@ namespace MVC_Pustokkk.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "Featureds",
+                name: "Products",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
@@ -28,7 +28,7 @@ namespace MVC_Pustokkk.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Featureds", x => x.Id);
+                    table.PrimaryKey("PK_Products", x => x.Id);
                 });
         }
 
@@ -36,7 +36,7 @@ namespace MVC_Pustokkk.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "Featureds");
+                name: "Products");
         }
     }
 }

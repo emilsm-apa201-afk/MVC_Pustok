@@ -15,7 +15,7 @@ namespace MVC_Pustokkk.Models
         [NotMapped]                         
         public IFormFile? Photo { get; set; } 
 
-        public List<Featured> Featureds { get; set; } = new();
+        public List<Product> Products { get; set; } = new();
     }
 }
 

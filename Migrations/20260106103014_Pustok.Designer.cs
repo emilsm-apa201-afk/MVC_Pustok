@@ -25,7 +25,7 @@ namespace MVC_Pustokkk.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("MVC_Pustokkk.Models.Featured", b =>
+            modelBuilder.Entity("MVC_Pustokkk.Models.Product", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -62,7 +62,7 @@ namespace MVC_Pustokkk.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Featureds");
+                    b.ToTable("Products");
                 });
 #pragma warning restore 612, 618
         }

@@ -12,7 +12,7 @@ namespace MVC_Pustokkk.Migrations
         {
             migrationBuilder.AddColumn<int>(
                 name: "CategoryId",
-                table: "Featureds",
+                table: "Products",
                 type: "int",
                 nullable: false,
                 defaultValue: 0);
@@ -31,13 +31,13 @@ namespace MVC_Pustokkk.Migrations
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_Featureds_CategoryId",
-                table: "Featureds",
+                name: "IX_Products_CategoryId",
+                table: "Products",
                 column: "CategoryId");
 
             migrationBuilder.AddForeignKey(
-                name: "FK_Featureds_Categories_CategoryId",
-                table: "Featureds",
+                name: "FK_Products_Categories_CategoryId",
+                table: "Products",
                 column: "CategoryId",
                 principalTable: "Categories",
                 principalColumn: "Id",
@@ -48,19 +48,19 @@ namespace MVC_Pustokkk.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropForeignKey(
-                name: "FK_Featureds_Categories_CategoryId",
-                table: "Featureds");
+                name: "FK_Products_Categories_CategoryId",
+                table: "Products");
 
             migrationBuilder.DropTable(
                 name: "Categories");
 
             migrationBuilder.DropIndex(
-                name: "IX_Featureds_CategoryId",
-                table: "Featureds");
+                name: "IX_Products_CategoryId",
+                table: "Products");
 
             migrationBuilder.DropColumn(
                 name: "CategoryId",
-                table: "Featureds");
+                table: "Products");
         }
     }
 }

@@ -1,0 +1,39 @@
+﻿@model List<MVC_Pustokkk.Models.Product>
+
+<div class="container">
+    <a asp-action="Create" class="btn btn-primary mb-3">Add Product</a>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Author</th>
+                <th>Price</th>
+                <th>Category</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var product in Model)
+            {
+                <tr>
+                    <td>@product.Id</td>
+                    <td>@product.Author</td>
+                    <td>@product.Price</td>
+                    <td>@product.Category?.Name</td>
+                    <td>
+                        <a asp-action="Update" asp-route-id="@product.Id" class="btn btn-secondary">Edit</a>
+
+                        <form asp-action="Delete" asp-route-id="@product.Id" method="post" style="display:inline-block"
+                              onsubmit="return confirm('Silmək istədiyinizə əminsiniz?');">
+                            @Html.AntiForgeryToken()
+                            <button type="submit" class="btn btn-warning">Delete</button>
+                        </form>
+
+                        <a asp-action="Detail" asp-route-id="@product.Id" class="btn btn-info">Details</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+

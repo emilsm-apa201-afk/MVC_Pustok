@@ -2,7 +2,7 @@
 
 namespace MVC_Pustokkk.Models
 {
-    public class Featured:BaseEntity
+    public class Product:BaseEntity
     {  
         public int Id { get; set; }
         public string Author { get; set; }

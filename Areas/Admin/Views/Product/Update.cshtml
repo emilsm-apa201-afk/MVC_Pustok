@@ -1,0 +1,55 @@
+﻿@model MVC_Pustokkk.Areas.Admin.ViewModels.ProductVM
+
+<form asp-action="Update" method="post" enctype="multipart/form-data">
+    @Html.AntiForgeryToken()
+
+    <input type="hidden" asp-for="Id" />
+
+    <div class="form-group">
+        <label>Author</label>
+        <input asp-for="Author" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label>Details</label>
+        <textarea asp-for="Details" class="form-control"></textarea>
+    </div>
+
+    <div class="form-group">
+        <label>Price</label>
+        <input asp-for="Price" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label>Old Price</label>
+        <input asp-for="PriceOld" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label>Discount</label>
+        <input asp-for="PriceDiscount" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label>Category</label>
+        <select asp-for="CategoryId" asp-items="@(new SelectList(Model.Categories, "Id", "Name"))" class="form-control">
+            <option value="">Select Category</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label>Current Image</label><br />
+        @if (!string.IsNullOrEmpty(Model.Image))
+        {
+            <img src="~/assets/image/@Model.Image" width="150" />
+        }
+    </div>
+
+    <div class="form-group">
+        <label>Change Image (optional)</label>
+        <input asp-for="Photo" type="file" class="form-control" />
+    </div>
+
+    <button type="submit" class="btn btn-primary">Update</button>
+</form>
+
