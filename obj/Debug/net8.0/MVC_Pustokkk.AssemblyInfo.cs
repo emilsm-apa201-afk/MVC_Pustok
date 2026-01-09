@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MVC_Pustokkk")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+207d7e2fec24312b83b9c03c2110fda402d09705")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+df74f006ea1086127bb7d1b5d09ab1f9ce1c9e77")]
 [assembly: System.Reflection.AssemblyProductAttribute("MVC_Pustokkk")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MVC_Pustokkk")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

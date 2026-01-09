@@ -20,12 +20,15 @@ namespace MVC_Pustokkk.Areas.Admin.Controllers
 
         public async Task<IActionResult> Index()
         {
-            var categories = await _context.Categories.ToListAsync();
-            var vms = categories.Select(c => new CategoryVM
-            {
-                Id = c.Id,
-                Name = c.Name,
-            }).ToList();
+            // Bütün məhsulları bazadan çəkmək yerinə, birbaşa sayını hesablayırıq
+            var vms = await _context.Categories
+                .Select(c => new CategoryVM
+                {
+                    Id = c.Id,
+                    Name = c.Name,
+                    ProductCount = c.Products.Count // EF bunu avtomatik SQL-də COUNT(*) edəcək
+                })
+                .ToListAsync();
 
             return View(vms);
         }
@@ -153,22 +156,35 @@ namespace MVC_Pustokkk.Areas.Admin.Controllers
             return RedirectToAction("Index");
         }
 
-        public async Task<IActionResult> Detail(int? id)
+        public async Task<IActionResult> Detail(int id)
         {
-            if (id == null || id < 1)
-                return BadRequest();
+            var category = await _context.Categories
+                .Include(c => c.Products) 
+                .FirstOrDefaultAsync(c => c.Id == id);
 
-            var category = await _context.Categories.FindAsync(id);
-            if (category == null)
-                return NotFound();
+            if (category == null) return NotFound();
 
-            var categoryVM = new CategoryVM
+            var vm = new CategoryVM
             {
                 Id = category.Id,
                 Name = category.Name,
+                ProductCount = category.Products.Count,
+                //Photo = category.Products.
+
+                Products = category.Products.Select(p => new ProductVM
+                {
+                    Id = p.Id,
+                    Author = p.Author,
+                    Details = p.Details,
+                    Price = p.Price,
+                    PriceOld = p.PriceOld,
+                    PriceDiscount = p.PriceDiscount,
+                    Image = p.Image,
+                    Photo = p.Photo,
+                }).ToList()
             };
 
-            return View(categoryVM);
+            return View(vm);
         }
     }
 }

@@ -1,9 +1,13 @@
-﻿@using MVC_Pustokkk.Areas.Admin.ViewModels
+﻿@* @using MVC_Pustokkk.Areas.Admin.ViewModels
 @model CategoryVM
 
 <div>
-	<h3>@Model.Name</h3>
-	<p>@Model.Id</p>
+	<h3>Name: @Model.Name</h3>
+	<p>ID: @Model.Id</p>
+	<p>Product Count: @Model.Products.Count</p>
+	<div class="col-md-4">
+		<img src="~/assets/images/products/@Model.Image" class="img-fluid rounded shadow" />
+	</div>
 </div>
 
 @foreach(ProductVM Product in Model.Products)
@@ -11,10 +15,86 @@
 	<div>
 		<h3>@Product.Author</h3>
 		<p>@Product.Details</p>
-		<p>@Product.Image</p>
-		<p>@Product.Price</p>
+		@* <p>@Product.Image</p> *@
+		@* <p>@Product.Price</p>
 		<p>@Product.PriceOld</p>
 		<p>@Product.PriceDiscount</p>
-		<p>@Product.Photo</p>
+		<p>@Product.Photo</p> *@
 	</div>
-}
+@* } *@ @* *@
+
+@using MVC_Pustokkk.Areas.Admin.ViewModels
+@model CategoryVM
+
+<div class="container-fluid mt-4">
+    <div class="card shadow mb-4">
+        <div class="card-header py-3 bg-primary text-white">
+            <h6 class="m-0 font-weight-bold">Kateqoriya Detalları</h6>
+        </div>
+        <div class="card-body">
+            <div class="row align-items-center">
+                <div class="col-md-8">
+                    <h3><strong>Adı:</strong> @Model.Name</h3>
+                    <p class="mb-1"><strong>ID:</strong> @Model.Id</p>
+                    <p class="mb-0"><strong>Məhsul Sayı:</strong> <span class="badge bg-success">@Model.Products.Count</span></p>
+                </div>
+                @* Əgər Kateqoriyanın öz şəkli varsa bura çıxacaq, yoxdursa bu hissəni silə bilərsən *@
+                @if (!string.IsNullOrEmpty(Model.Image))
+                {
+                    <div class="col-md-4 text-end">
+                        <img src="~/assets/images/products/@Model.Image" class="img-fluid rounded shadow" style="max-height: 150px;" />
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+
+    <hr />
+    <h4 class="mb-4 text-gray-800">Bu kateqoriyaya aid məhsullar:</h4>
+
+    <div class="row">
+        @if (Model.Products != null && Model.Products.Any())
+        {
+            @foreach (var Product in Model.Products)
+            {
+                <div class="col-xl-3 col-md-6 mb-4">
+                    <div class="card shadow h-100 border-bottom-primary">
+                        <div class="card-body text-center">
+                            <div class="mb-3">
+                                <img src="~/assets/images/products/@Product.Image"
+                                     class="img-fluid rounded shadow-sm"
+                                     style="height: 200px; width: 100%; object-fit: cover;"
+                                     alt="@Product.Author" />
+                            </div>
+
+                            <h5 class="font-weight-bold text-primary text-uppercase mb-1">@Product.Author</h5>
+                            <p class="text-muted small">@Product.Details</p>
+
+                            <div class="h5 mb-0 font-weight-bold text-gray-800">
+                                @Product.Price AZN
+                                @if (Product.PriceOld > 0)
+                                {
+                                    <span class="text-muted ml-2" style="text-decoration: line-through; font-size: 0.8rem;">
+                                        @Product.PriceOld AZN
+                                    </span>
+                                }
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+        }
+        else
+        {
+            <div class="col-12">
+                <div class="alert alert-info">Bu kateqoriyada heç bir məhsul tapılmadı.</div>
+            </div>
+        }
+    </div>
+
+    <div class="mt-4 mb-5">
+        <a asp-action="Index" class="btn btn-secondary">
+            <i class="fas fa-arrow-left"></i> Siyahıya Qayıt
+        </a>
+    </div>
+</div>

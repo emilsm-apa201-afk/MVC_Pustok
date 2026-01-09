@@ -2039,3 +2039,6 @@ wwwroot\assets\images\products\e51dadd3-489c-4147-a042-d355ed841e4c_360_F_645566
 wwwroot\assets\images\products\58d49f7d-9853-4682-994c-a323752fab18_360_F_6455661_Ptvg5iAO0DpUlt0ItlO8YewZpvU3IxwX.jpg
 wwwroot\assets\images\13a717be-430f-441d-8435-0ebad09e1242_book-97709_1280.jpg
 wwwroot\assets\images\2673d34c-5b5b-4245-9d07-7942e00566ef_360_F_580611440_4oCo3gd5XcCkpaRYyiO7QaS67rKEvLgI.jpg
+wwwroot\assets\images\products\07b4e6c1-f52b-4a81-bf30-d1b1730ec9eb71mGTIpBLhL._AC_UF894,1000_QL80_.jpg
+wwwroot\assets\images\products\009a3ff3-bae0-4b4e-8285-6a285763db5bimages.jpg
+wwwroot\assets\images\products\c4e6635e-e123-484f-afe1-eff260fd2490images (1).jpg
