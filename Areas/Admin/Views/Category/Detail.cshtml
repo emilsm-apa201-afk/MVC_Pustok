@@ -1,29 +1,4 @@
-﻿@* @using MVC_Pustokkk.Areas.Admin.ViewModels
-@model CategoryVM
-
-<div>
-	<h3>Name: @Model.Name</h3>
-	<p>ID: @Model.Id</p>
-	<p>Product Count: @Model.Products.Count</p>
-	<div class="col-md-4">
-		<img src="~/assets/images/products/@Model.Image" class="img-fluid rounded shadow" />
-	</div>
-</div>
-
-@foreach(ProductVM Product in Model.Products)
-{
-	<div>
-		<h3>@Product.Author</h3>
-		<p>@Product.Details</p>
-		@* <p>@Product.Image</p> *@
-		@* <p>@Product.Price</p>
-		<p>@Product.PriceOld</p>
-		<p>@Product.PriceDiscount</p>
-		<p>@Product.Photo</p> *@
-	</div>
-@* } *@ @* *@
-
-@using MVC_Pustokkk.Areas.Admin.ViewModels
+﻿@using MVC_Pustokkk.Areas.Admin.ViewModels
 @model CategoryVM
 
 <div class="container-fluid mt-4">
@@ -34,11 +9,10 @@
         <div class="card-body">
             <div class="row align-items-center">
                 <div class="col-md-8">
-                    <h3><strong>Adı:</strong> @Model.Name</h3>
+                    <h3><strong>Name:</strong> @Model.Name</h3>
                     <p class="mb-1"><strong>ID:</strong> @Model.Id</p>
-                    <p class="mb-0"><strong>Məhsul Sayı:</strong> <span class="badge bg-success">@Model.Products.Count</span></p>
+                    <p class="mb-0"><strong>Product Count:</strong> <span class="badge bg-success">@Model.Products.Count</span></p>
                 </div>
-                @* Əgər Kateqoriyanın öz şəkli varsa bura çıxacaq, yoxdursa bu hissəni silə bilərsən *@
                 @if (!string.IsNullOrEmpty(Model.Image))
                 {
                     <div class="col-md-4 text-end">
@@ -50,7 +24,7 @@
     </div>
 
     <hr />
-    <h4 class="mb-4 text-gray-800">Bu kateqoriyaya aid məhsullar:</h4>
+    <h4 class="mb-4 text-gray-800">Bu kateqoriyaya aid mehsullar:</h4>
 
     <div class="row">
         @if (Model.Products != null && Model.Products.Any())
@@ -87,14 +61,14 @@
         else
         {
             <div class="col-12">
-                <div class="alert alert-info">Bu kateqoriyada heç bir məhsul tapılmadı.</div>
+                <div class="alert alert-info">Bu kateqoriyada hec bir mehsul tapilmadi.</div>
             </div>
         }
     </div>
 
     <div class="mt-4 mb-5">
         <a asp-action="Index" class="btn btn-secondary">
-            <i class="fas fa-arrow-left"></i> Siyahıya Qayıt
+            <i class="fas fa-arrow-left"></i> Siyahiya Qayit
         </a>
     </div>
 </div>

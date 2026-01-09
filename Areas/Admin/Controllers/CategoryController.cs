@@ -20,13 +20,12 @@ namespace MVC_Pustokkk.Areas.Admin.Controllers
 
         public async Task<IActionResult> Index()
         {
-            // Bütün məhsulları bazadan çəkmək yerinə, birbaşa sayını hesablayırıq
             var vms = await _context.Categories
                 .Select(c => new CategoryVM
                 {
                     Id = c.Id,
                     Name = c.Name,
-                    ProductCount = c.Products.Count // EF bunu avtomatik SQL-də COUNT(*) edəcək
+                    ProductCount = c.Products.Count 
                 })
                 .ToListAsync();
 
