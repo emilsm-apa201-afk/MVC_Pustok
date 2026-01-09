@@ -3,6 +3,8 @@ using Microsoft.EntityFrameworkCore;
 using MVC_Pustokkk.Areas.Admin.ViewModels;
 using MVC_Pustokkk.DAL;
 using MVC_Pustokkk.Models;
+using NuGet.ContentModel;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace MVC_Pustokkk.Areas.Admin.Controllers
 {
@@ -41,37 +43,48 @@ namespace MVC_Pustokkk.Areas.Admin.Controllers
             if (!ModelState.IsValid)
                 return View(category);
 
-            bool exists = await _context.Categories.AnyAsync(p => p.Name == category.Name);
+            bool exists = await _context.Categories.AnyAsync(c => c.Name == category.Name);
             if (exists)
             {
-                ModelState.AddModelError("Name", "Bu name sistemde var");
+                ModelState.AddModelError("Name", "Bu category artıq mövcuddur");
+                return View(category);
+            }
+
+            if (category.Photo == null)
+            {
+                ModelState.AddModelError("Photo", "Şəkil seçilməlidir");
                 return View(category);
             }
 
             if (!category.Photo.ContentType.Contains("image/"))
             {
-                ModelState.AddModelError("Photo", "Siz uygun formatda file elave etmirsiz.");
+                ModelState.AddModelError("Photo", "Yalnız şəkil faylı yükləyə bilərsiniz");
                 return View(category);
             }
 
             if (category.Photo.Length > 2 * 1024 * 1024)
             {
-                ModelState.AddModelError("Photo", "Siz duzgun hecmde file elave etmirsiz.");
+                ModelState.AddModelError("Photo", "Şəkil maksimum 2MB ola bilər");
                 return View(category);
             }
 
-            string fileName = Guid.NewGuid().ToString() + category.Photo.FileName;
-            string path = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/assets/image", fileName);
-
-            using (var fileStream = new FileStream(path, FileMode.Create))
+            string folder = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/assets/images/products");
+            if (!Directory.Exists(folder))
             {
-                await category.Photo.CopyToAsync(fileStream);
+                Directory.CreateDirectory(folder);
             }
+
+            string fileName = Guid.NewGuid().ToString() + "_" + category.Photo.FileName;
+            string path = Path.Combine(folder, fileName);
+
+            using var fs = new FileStream(path, FileMode.Create);
+            await category.Photo.CopyToAsync(fs);
 
             category.Image = fileName;
 
             await _context.Categories.AddAsync(category);
             await _context.SaveChangesAsync();
+
             return RedirectToAction("Index");
         }
 
@@ -113,7 +126,7 @@ namespace MVC_Pustokkk.Areas.Admin.Controllers
             if (category.Photo != null)
             {
                 string fileName = Guid.NewGuid().ToString() + category.Photo.FileName;
-                string path = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/assets/image", fileName);
+                string path = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/assets/images/products", fileName);
                 using var fs = new FileStream(path, FileMode.Create);
                 await category.Photo.CopyToAsync(fs);
                 exists.Image = fileName;

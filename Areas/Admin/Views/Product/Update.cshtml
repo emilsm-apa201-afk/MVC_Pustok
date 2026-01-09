@@ -1,55 +1,35 @@
 ﻿@model MVC_Pustokkk.Areas.Admin.ViewModels.ProductVM
 
-<form asp-action="Update" method="post" enctype="multipart/form-data">
-    @Html.AntiForgeryToken()
-
-    <input type="hidden" asp-for="Id" />
-
-    <div class="form-group">
-        <label>Author</label>
-        <input asp-for="Author" class="form-control" />
-    </div>
-
-    <div class="form-group">
-        <label>Details</label>
-        <textarea asp-for="Details" class="form-control"></textarea>
-    </div>
-
-    <div class="form-group">
-        <label>Price</label>
-        <input asp-for="Price" class="form-control" />
-    </div>
-
-    <div class="form-group">
-        <label>Old Price</label>
-        <input asp-for="PriceOld" class="form-control" />
-    </div>
-
-    <div class="form-group">
-        <label>Discount</label>
-        <input asp-for="PriceDiscount" class="form-control" />
-    </div>
-
-    <div class="form-group">
-        <label>Category</label>
-        <select asp-for="CategoryId" asp-items="@(new SelectList(Model.Categories, "Id", "Name"))" class="form-control">
-            <option value="">Select Category</option>
-        </select>
-    </div>
-
-    <div class="form-group">
-        <label>Current Image</label><br />
-        @if (!string.IsNullOrEmpty(Model.Image))
-        {
-            <img src="~/assets/image/@Model.Image" width="150" />
-        }
-    </div>
-
-    <div class="form-group">
-        <label>Change Image (optional)</label>
-        <input asp-for="Photo" type="file" class="form-control" />
-    </div>
-
-    <button type="submit" class="btn btn-primary">Update</button>
-</form>
-
+<div class="container py-4">
+    <h3>Update Product</h3>
+    <form method="post" enctype="multipart/form-data">
+        <div class="row mt-3">
+            <div class="col-md-4 mb-3">
+                <label>Current Image:</label><br />
+                <img src="~/assets/images/products/@Model.Image" width="200" class="img-thumbnail" />
+            </div>
+            <div class="col-md-8">
+                <div class="mb-3">
+                    <label asp-for="Photo">Change Photo (optional)</label>
+                    <input asp-for="Photo" class="form-control" accept="image/*" />
+                </div>
+                <div class="row">
+                    <div class="col-6 mb-3">
+                        <label asp-for="Author"></label>
+                        <input asp-for="Author" class="form-control" />
+                    </div>
+                    <div class="col-6 mb-3">
+                        <label asp-for="CategoryId"></label>
+                        <select asp-for="CategoryId" class="form-control" asp-items="@(new SelectList(Model.Categories, "Id", "Name"))"></select>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 mb-3">
+                <label asp-for="Details"></label>
+                <textarea asp-for="Details" class="form-control" rows="4"></textarea>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-warning">Update Product</button>
+        <a asp-action="Index" class="btn btn-secondary">Back</a>
+    </form>
+</div>

@@ -1,39 +1,35 @@
 ﻿@model List<MVC_Pustokkk.Models.Product>
-
-<div class="container">
-    <a asp-action="Create" class="btn btn-primary mb-3">Add Product</a>
-    <table class="table table-bordered">
-        <thead>
+<div class="container py-4">
+    <div class="d-flex justify-content-between align-items-center mb-3">
+        <h2>Products</h2>
+        <a asp-action="Create" class="btn btn-success">Create New</a>
+    </div>
+    <table class="table table-bordered align-middle">
+        <thead class="table-dark">
             <tr>
-                <th>Id</th>
+                <th>Image</th>
                 <th>Author</th>
-                <th>Price</th>
                 <th>Category</th>
-                <th>Actions</th>
+                <th>Price</th>
+                <th class="text-center">Actions</th>
             </tr>
         </thead>
         <tbody>
-            @foreach (var product in Model)
-            {
+            @foreach (var item in Model) {
                 <tr>
-                    <td>@product.Id</td>
-                    <td>@product.Author</td>
-                    <td>@product.Price</td>
-                    <td>@product.Category?.Name</td>
-                    <td>
-                        <a asp-action="Update" asp-route-id="@product.Id" class="btn btn-secondary">Edit</a>
-
-                        <form asp-action="Delete" asp-route-id="@product.Id" method="post" style="display:inline-block"
-                              onsubmit="return confirm('Silmək istədiyinizə əminsiniz?');">
-                            @Html.AntiForgeryToken()
-                            <button type="submit" class="btn btn-warning">Delete</button>
+                    <td><img src="~/assets/images/products/@item.Image" width="60" /></td>
+                    <td>@item.Author</td>
+                    <td>@item.Category?.Name</td>
+                    <td>@item.Price AZN</td>
+                    <td class="text-center">
+                        <a asp-action="Detail" asp-route-id="@item.Id" class="btn btn-info btn-sm">Detail</a>
+                        <a asp-action="Update" asp-route-id="@item.Id" class="btn btn-warning btn-sm">Edit</a>
+                        <form asp-action="Delete" asp-route-id="@item.Id" method="post" class="d-inline">
+                            <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Silmək istəyirsiz?')">Delete</button>
                         </form>
-
-                        <a asp-action="Detail" asp-route-id="@product.Id" class="btn btn-info">Details</a>
                     </td>
                 </tr>
             }
         </tbody>
     </table>
 </div>
-

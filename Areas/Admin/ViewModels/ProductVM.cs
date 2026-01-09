@@ -14,6 +14,7 @@ namespace MVC_Pustokkk.Areas.Admin.ViewModels
 
         [Required]
         public string Details { get; set; }
+
         public string Image { get; set; }
 
         [Required]
@@ -30,3 +31,4 @@ namespace MVC_Pustokkk.Areas.Admin.ViewModels
         public IFormFile Photo { get; set; }
     }
 }
+

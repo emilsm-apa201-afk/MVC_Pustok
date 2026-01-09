@@ -24,122 +24,105 @@ namespace MVC_Pustokkk.Areas.Admin.Controllers
             return View(products);
         }
 
-        [HttpGet]
+        public async Task<IActionResult> Detail(int id)
+        {
+            var product = await _context.Products.Include(p => p.Category).FirstOrDefaultAsync(p => p.Id == id);
+            if (product == null) return NotFound();
+            return View(product);
+        }
+
         public async Task<IActionResult> Create()
         {
-            var vm = new ProductVM
-            {
-                Categories = await _context.Categories.ToListAsync()
-            };
+            ProductVM vm = new() { Categories = await _context.Categories.ToListAsync() };
             return View(vm);
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create(ProductVM model)
+        public async Task<IActionResult> Create(ProductVM vm)
         {
-            if (!ModelState.IsValid)
+            if (vm.Photo == null)
             {
-                model.Categories = await _context.Categories.ToListAsync();
-                return View(model);
+                ModelState.AddModelError("Photo", "Şəkil mütləq yüklənməlidir");
+                return View(vm);
             }
 
-            if (model.Photo == null || !model.Photo.ContentType.Contains("image/"))
+            string fileName = Guid.NewGuid() + vm.Photo.FileName;
+            string path = Path.Combine(_env.WebRootPath, "assets/images/products", fileName);
+            using (FileStream stream = new(path, FileMode.Create))
             {
-                ModelState.AddModelError("Photo", "Düzgün şəkil yükləyin");
-                model.Categories = await _context.Categories.ToListAsync();
-                return View(model);
+                await vm.Photo.CopyToAsync(stream);
             }
 
-            if (model.Photo.Length > 2 * 1024 * 1024)
+            Product product = new()
             {
-                ModelState.AddModelError("Photo", "Şəkil maksimum 2MB ola bilər");
-                model.Categories = await _context.Categories.ToListAsync();
-                return View(model);
-            }
-
-            string fileName = Guid.NewGuid() + Path.GetExtension(model.Photo.FileName);
-            string folderPath = Path.Combine(_env.WebRootPath, "assets/image");
-
-            if (!Directory.Exists(folderPath))
-                Directory.CreateDirectory(folderPath);
-
-            string fullPath = Path.Combine(folderPath, fileName);
-            using var stream = new FileStream(fullPath, FileMode.Create);
-            await model.Photo.CopyToAsync(stream);
-
-            
-            var product = new Product
-            {
-                Author = model.Author,
-                Details = model.Details,
-                Image = fileName,
-                Price = model.Price,
-                PriceOld = model.PriceOld,
-                PriceDiscount = model.PriceDiscount,
-                CategoryId = model.CategoryId
+                Author = vm.Author,
+                Details = vm.Details,
+                Price = vm.Price,
+                PriceOld = vm.PriceOld,
+                PriceDiscount = vm.PriceDiscount,
+                CategoryId = vm.CategoryId,
+                Image = fileName
             };
 
             await _context.Products.AddAsync(product);
             await _context.SaveChangesAsync();
-
-            return RedirectToAction("Index");
+            return RedirectToAction(nameof(Index));
         }
-        
 
-        [HttpGet]
         public async Task<IActionResult> Update(int id)
         {
             var product = await _context.Products.FindAsync(id);
             if (product == null) return NotFound();
 
-            var vm = new ProductVM
+            ProductVM vm = new()
             {
                 Id = product.Id,
                 Author = product.Author,
                 Details = product.Details,
-                Image = product.Image,
                 Price = product.Price,
                 PriceOld = product.PriceOld,
                 PriceDiscount = product.PriceDiscount,
                 CategoryId = product.CategoryId,
+                Image = product.Image,
                 Categories = await _context.Categories.ToListAsync()
             };
-
             return View(vm);
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Update(int id, ProductVM model)
+        public async Task<IActionResult> Update(int id, ProductVM vm)
         {
-            if (!ModelState.IsValid)
+            vm.Categories = await _context.Categories.ToListAsync();
+            var exist = await _context.Products.FindAsync(id);
+            if (exist == null) return NotFound();
+
+            if (!ModelState.IsValid) return View(vm);
+
+            if (vm.Photo != null)
             {
-                model.Categories = await _context.Categories.ToListAsync();
-                return View(model);
+                string oldPath = Path.Combine(_env.WebRootPath, "assets/images/products", exist.Image);
+                if (System.IO.File.Exists(oldPath)) System.IO.File.Delete(oldPath);
+
+                string fileName = Guid.NewGuid() + vm.Photo.FileName;
+                string newPath = Path.Combine(_env.WebRootPath, "assets/images/products", fileName);
+                using (FileStream stream = new(newPath, FileMode.Create))
+                {
+                    await vm.Photo.CopyToAsync(stream);
+                }
+                exist.Image = fileName;
             }
 
-            var product = await _context.Products.FindAsync(id);
-            if (product == null) return NotFound();
-
-            product.Author = model.Author;
-            product.Details = model.Details;
-            product.Price = model.Price;
-            product.PriceOld = model.PriceOld;
-            product.PriceDiscount = model.PriceDiscount;
-            product.CategoryId = model.CategoryId;
-
-            if (model.Photo != null)
-            {
-                string fileName = Guid.NewGuid() + model.Photo.FileName;
-                string path = Path.Combine(_env.WebRootPath, "assets/image", fileName);
-                using var stream = new FileStream(path, FileMode.Create);
-                await model.Photo.CopyToAsync(stream);
-                product.Image = fileName;
-            }
+            exist.Author = vm.Author;
+            exist.Details = vm.Details;
+            exist.Price = vm.Price;
+            exist.PriceOld = vm.PriceOld;
+            exist.PriceDiscount = vm.PriceDiscount;
+            exist.CategoryId = vm.CategoryId;
 
             await _context.SaveChangesAsync();
-            return RedirectToAction("Index");
+            return RedirectToAction(nameof(Index));
         }
 
         [HttpPost]
@@ -149,21 +132,12 @@ namespace MVC_Pustokkk.Areas.Admin.Controllers
             var product = await _context.Products.FindAsync(id);
             if (product == null) return NotFound();
 
-            if (!product.IsDeleted)
-                product.IsDeleted = true;
-            else
-                _context.Products.Remove(product);
+            string path = Path.Combine(_env.WebRootPath, "assets/images/products", product.Image);
+            if (System.IO.File.Exists(path)) System.IO.File.Delete(path);
 
+            _context.Products.Remove(product);
             await _context.SaveChangesAsync();
-            return RedirectToAction("Index");
-        }
-
-        public async Task<IActionResult> Detail(int id)
-        {
-            var product = await _context.Products.Include(p => p.Category).FirstOrDefaultAsync(p => p.Id == id);
-            if (product == null) return NotFound();
-            return View(product);
+            return RedirectToAction(nameof(Index));
         }
     }
 }
-

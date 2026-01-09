@@ -1,4 +1,5 @@
-﻿using MVC_Pustokkk.Models.Base;
+﻿using System.ComponentModel.DataAnnotations.Schema;
+using MVC_Pustokkk.Models.Base;
 
 namespace MVC_Pustokkk.Models
 {
@@ -13,6 +14,8 @@ namespace MVC_Pustokkk.Models
         public decimal PriceDiscount { get; set; }
         public int CategoryId { get; set; }
         public Category Category { get; set; }
+        [NotMapped]
+        public IFormFile Photo { get; set; }
 
     }
 }
